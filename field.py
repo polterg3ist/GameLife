@@ -147,10 +147,7 @@ class Field(pygame.sprite.Group):
         self.offset.xy = (-centerx, -centery)
 
         for index_row, row in enumerate(self.cells_field):
-            # self.cell_height can be also self.cell_width because cell is square by default
-            #shift.y -= index_row * self.cell_height
             for index_cell, cell in enumerate(row):
-                #shift.x -= index_cell * self.cell_width
                 cell.rect.topleft -= shift
 
     def custom_draw(self):
